@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "ECNU model quota",
+    "description": "Shows remaining ECNU model quota, resource packs and reset times in the account menu, only for a signed-in ECNU model."
+  }
+}

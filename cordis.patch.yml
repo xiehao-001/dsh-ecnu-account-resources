@@ -1,0 +1,6 @@
+# Installed by the bundle patch: one row, ECNU defaults pre-filled.
+- insert:
+    - id: ecnu-account-resources
+      name: '@eduwork/dsh-ecnu-account-resources'
+      config:
+          profileIDs: ["ecnu"]

@@ -1,0 +1,55 @@
+{
+  "name": "@eduwork/dsh-ecnu-account-resources",
+  "version": "0.1.0",
+  "description": "Shows remaining ECNU model quota, resource packs and reset times in the account menu, only for a signed-in ECNU model.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "license": "MulanPSL-2.0 AND MIT",
+  "engines": {
+    "dsh": ">=0.2.1 <0.3.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.2 <4.1.0",
+    "@deepseek-ai/dsh-typert-protocol": ">=0.2.1 <0.3.0",
+    "@deepseek-ai/dsh-api-remotes": ">=0.1.5-rc.1",
+    "@deepseek-ai/dsh-client-ui-renderer": ">=0.1.5-rc.1",
+    "@eduwork/dsh-oidc": ">=0.3.4",
+    "react": "^18.2.0",
+    "zod": "^4.4.3"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./client": "./lib/client.js",
+    "./typert": "./lib/typert.host.js"
+  },
+  "files": [
+    "lib",
+    "locale/*.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "LICENSE-MIT",
+    "LICENSING.md",
+    "*.md",
+    "*.yaml",
+    "*.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-api-remotes",
+        "@eduwork/dsh-oidc"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
